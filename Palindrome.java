@@ -1,22 +1,18 @@
-package strings;
+package com.string.pack;
+
+import java.util.Scanner;
 
 public class Palindrome {
-    public static void main(String[] args) {
-		String s="malayalam";
-		for(int i=0;i<s.length();i++) {
-			for(int j=i+1;j<s.length();j++) {
-				if(isPalindrome(s, i, j))
-					System.out.println(s.substring(i,j+1));
-			}
+   public static void main(String[] args) {
+	Scanner scn=new Scanner(System.in);
+	System.out.println("Enter String");
+	String s=scn.nextLine();
+	String temp="";
+	for(int i=s.length()-1;i>=0;i--) {
+		char ch=s.charAt(i);
+		temp+=ch;
 		}
-    }
-    public static boolean isPalindrome(String s,int start,int end) {
-    	int i=start,j=end;
-    	while(i<j) {
-    		if(s.charAt(i)!=s.charAt(j))return false;
-    		i++;
-    		j--;
-    	}
-    	return true;
-    }
+	if(s.equals(temp)) System.out.println("Palindrome");
+	else System.out.println("Not a Palindrome");
+}
 }

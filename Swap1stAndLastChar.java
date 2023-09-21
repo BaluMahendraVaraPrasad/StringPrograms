@@ -1,4 +1,4 @@
-package strings;
+package com.string.pack;
 
 public class Swap1stAndLastChar {
 
