@@ -1,4 +1,4 @@
-package com.string.pack;
+package strings;
 
 public class Encryption1 {
 	public static String encryption(String s,int n) {
